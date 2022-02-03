@@ -1,4 +1,4 @@
-class Student {
+class STUDENT {
     constructor(name, surname, age, gender) {
         this.name = name;
         this.surname = surname;
@@ -14,10 +14,10 @@ class Student {
     }
 
     calculateMean() {
-        let sum = this.grades.reduce((p, c) => p + c, 0);
-        if (this.grades.lenght === 0) {
+        if (this.grades.length === 0) {
             return -1;
         }
+        let sum = this.grades.reduce((p, c) => p + c);
         let mean = sum / this.grades.length;
         return mean;
     }
@@ -32,15 +32,13 @@ class Student {
 
     toString() {
         let mean = this.calculateMean();
-        if (mean === -1){
-            mean = "n/a";
+        if (mean === -1) {
+            return mean = "N/C"
         }
-
-        let studentDescription = "Nome: " + this.name + "\n"
+        let studentDescription = "\nNome: " + this.name + "\n"
             + "Cognome: " + this.surname + "\n"
-            + "Età: " + this.age + "\n"
-            + "Media: " + mean;
-        
+            + "Eta: " + this.age + "\n"
+            + "Media: " + mean; + "\n"
         return studentDescription;
     }
 }
